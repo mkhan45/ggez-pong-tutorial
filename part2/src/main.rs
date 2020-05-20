@@ -76,6 +76,7 @@ impl EventHandler for MainState {
 fn main() -> ggez::GameResult {
     // create a mutable reference to a `Context` and `EventsLoop`
     let (ctx, event_loop) = &mut ggez::ContextBuilder::new("Pong", "Mikail Khan")
+        .window_mode(ggez::conf::WindowMode::default().dimensions(SCREEN_WIDTH, SCREEN_HEIGHT))
         .build()
         .unwrap();
 
